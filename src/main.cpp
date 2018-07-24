@@ -9,6 +9,8 @@ Dual function(std::vector<Dual> x){
 int main() {
     std::vector<Dual> x = {Dual(50), Dual(50)}; // 50 are the default values
     SGD::decrease(function, x, 10, 0.7); // 10 iterations, 0.7 learning rate
+
+    // print function and parameters
     std::cout << "f = " << function(x) << std::endl;
     for(unsigned int i=0 ; i<x.size() ; i++){
         std::cout << "x[" << i << "] = " << x[i] << std::endl;
