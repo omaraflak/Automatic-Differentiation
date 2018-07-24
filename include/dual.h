@@ -25,6 +25,12 @@ class Dual {
         friend Dual operator-(const Dual& u, const Dual& v);
         friend Dual operator*(const Dual& u, const Dual& v);
         friend Dual operator/(const Dual& u, const Dual& v);
+        
+        Dual operator+=(const Dual& u);
+        Dual operator-=(const Dual& u);
+        Dual operator*=(const Dual& u);
+        Dual operator/=(const Dual& u);
+
         friend std::ostream& operator<<(std::ostream& os, const Dual& a);
 
         // maths

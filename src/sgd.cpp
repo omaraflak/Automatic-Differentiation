@@ -4,7 +4,7 @@ void SGD::decrease(Dual (*function)(std::vector<Dual>), std::vector<Dual>& x, in
     for(int i=0 ; i<epochs ; i++){
         for(Dual& var : x){
             var.setDerivative(1);
-            var = var - lr*function(x).getDerivative();
+            var -= lr*function(x).getDerivative();
             var.setDerivative(0);
         }
     }

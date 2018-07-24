@@ -48,6 +48,26 @@ Dual operator/(const Dual& u, const Dual& v){
     return Dual(u.val/v.val, (u.der*v.val-u.val*v.der)/(v.val*v.val));
 }
 
+Dual Dual::operator+=(const Dual& u){
+    *this = *this+u;
+    return *this;
+}
+
+Dual Dual::operator-=(const Dual& u){
+    *this = *this-u;
+    return *this;
+}
+
+Dual Dual::operator*=(const Dual& u){
+    *this = *this*u;
+    return *this;
+}
+
+Dual Dual::operator/=(const Dual& u){
+    *this = *this/u;
+    return *this;
+}
+
 std::ostream& operator<<(std::ostream& os, const Dual& a){
     os << a.val;
     return os;
