@@ -90,6 +90,11 @@ Dual log(Dual d){
     return Dual(::log(d.val), d.der/d.val);
 }
 
-Dual pow(Dual a, double p){
-    return Dual(::pow(a.val, p), p*a.der*::pow(a.val, p-1));
+Dual abs(Dual d){
+    int sign = d.val==0 ? 0 : d.val/::abs(d.val);
+    return Dual(::abs(d.val), d.der*sign);
+}
+
+Dual pow(Dual d, double p){
+    return Dual(::pow(d.val, p), p*d.der*::pow(d.val, p-1));
 }

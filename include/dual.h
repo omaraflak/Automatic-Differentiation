@@ -25,7 +25,7 @@ class Dual {
         friend Dual operator-(const Dual& u, const Dual& v);
         friend Dual operator*(const Dual& u, const Dual& v);
         friend Dual operator/(const Dual& u, const Dual& v);
-        
+
         Dual operator+=(const Dual& u);
         Dual operator-=(const Dual& u);
         Dual operator*=(const Dual& u);
@@ -38,7 +38,8 @@ class Dual {
         friend Dual cos(Dual d);
         friend Dual exp(Dual d);
         friend Dual log(Dual d);
-        friend Dual pow(Dual a, double p);
+        friend Dual abs(Dual d);
+        friend Dual pow(Dual d, double p);
 };
 
 #endif
