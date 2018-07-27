@@ -2,6 +2,8 @@
 
 Very simple automatic differentiation tool, implemented using dual numbers and operator overloading.
 
+This code is part of my article on **[Medium](https://medium.com/@omaraflak/automatic-differentiation-4d26d03b7508)**.
+
 # Example
 
 ```c++
