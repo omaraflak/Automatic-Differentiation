@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../include/dual.h"
-#include "../include/sgd.h"
+#include "../include/tools.h"
 
 Dual function(std::vector<Dual> x){
     return x[0]*x[0]+x[1]*x[1]; // x^2 + y^2

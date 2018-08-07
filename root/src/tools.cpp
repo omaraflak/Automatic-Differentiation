@@ -1,4 +1,4 @@
-#include "../include/sgd.h"
+#include "../include/tools.h"
 
 void SGD::decrease(Dual (*function)(std::vector<Dual>), std::vector<Dual>& x, int epochs, double lr){
     for(int i=0 ; i<epochs ; i++){
